@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.myhib4.Version.Product" table="PRODUCT">
+      
+      <id name="productId" column="pid"  >
+<generator class="assigned" />
+</id>
+<version name="v" column="ver"/> 
+<property name="proName" column="pname" />
+<property name="price"/>
+   </class>
+</hibernate-mapping>

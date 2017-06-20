@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	<class name="com.myhib7_TblPerConClass.Payment" table="PAYMENT">
+		<id name="paymentId" column="pid" />
+		<property name="amount" column="amt" />
+ 
+ 	<union-subclass name="com.myhib7_TblPerConClass.CreditCard">
+		<property name="CreditCardType" column="cctype" length="10" />
+	</union-subclass>
+ 
+	<union-subclass name="com.myhib7_TblPerConClass.Cheque">
+		<property name="ChequeType" column="cqtype" length="10" />
+	</union-subclass>
+   </class>
+</hibernate-mapping>

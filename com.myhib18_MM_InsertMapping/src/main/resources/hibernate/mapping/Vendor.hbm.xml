@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.myhib18.Vendor" table="vendor">
+ 
+<id name="vendorId" column="vendid"  />
+<property name="vendorName" column="vendname" length="10"/> 
+ 
+</class>
+</hibernate-mapping>

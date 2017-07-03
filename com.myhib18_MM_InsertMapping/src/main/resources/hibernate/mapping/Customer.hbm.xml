@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.myhib18.Customer" table="customer">
+ 
+<id name="customerId" column="custid"  />
+<property name="customerName" column="custname" length="10"/>
+ 
+<many-to-one name="parentObjects" column="Parent" class="com.myhib18.Vendor" cascade="all" />
+ 
+</class>
+</hibernate-mapping>
